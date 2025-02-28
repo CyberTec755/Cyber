@@ -13,5 +13,33 @@
 }
 
 body{
-    margin: 0;
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background-color: var(--cor1);
+    padding: 30px 20px 10px 20px;
+}
+
+#header-title{
+    font-size: 18px;
+}
+.headerd-nav{
+   display: flex;
+   justify-content: center;
+}
+.header-a{
+    text-decoration: none;
+    color: white;
+    padding: 8px;
+    margin: 5px;
+
+}
+.header-a:hover{
+    background-color: var(--cor2);
+    border-radius: 20px;
 }
