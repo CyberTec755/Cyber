@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+        }
+        .item-carrinho {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+        .item-carrinho h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .item-carrinho p {
+            margin: 5px 0;
+        }
+        .total-container {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .finalizar-compra {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .finalizar-compra:hover {
+            background-color: #45a049;
+        }
+        .voltar {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Carrinho de Compras</h1>
+    </div>
+
+    <div class="container" id="carrinho-container">
+        <p>Carregando produtos...</p>
+    </div>
+
+    <div class="total-container" id="total-container">
+        Total: R$ 0,00
+    </div>
+
+    <div class="voltar">
+        <a href="Principal.html">Voltar à loja</a>
+    </div>
+
+    <div class="voltar">
+        <button class="finalizar-compra">Finalizar Compra</button>
+    </div>
+
+    <script>
+        // Função para carregar os itens do carrinho
+        function carregarCarrinho() {
+            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+            const carrinhoContainer = document.getElementById('carrinho-container');
+            const totalContainer = document.getElementById('total-container');
+            let total = 0;
+
+            carrinhoContainer.innerHTML = 'X'; // Limpa os itens existentes
+
+            if (carrinho.length > 0) {
+                carrinho.forEach(item => {
+                    total += item.preco;
+                    const divItem = document.createElement('div');
+                    divItem.classList.add('item-carrinho');
+                    divItem.innerHTML = `
+                        <h3>${item.nome}</h3>
+                        <p>Preço: R$ ${item.preco}</p>
+                    `;
+                    carrinhoContainer.appendChild(divItem);
+                });
+                totalContainer.innerHTML = `Total: R$ ${total.toFixed(2)}`;
+            } else {
+                carrinhoContainer.innerHTML = '<p>Seu carrinho está vazio.</p>';
+                totalContainer.innerHTML = 'Total: R$ 0,00';
+            }
+        }
+
+        // Carrega os produtos do carrinho quando a página for carregada
+        window.onload = carregarCarrinho;
+    </script>
+
+</body>
+</html>
