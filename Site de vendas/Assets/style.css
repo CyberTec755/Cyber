@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* Variaveis */
+
+:root{
+    --cor0 : #00122D;
+    --cor1 : #001e4b;
+    --cor2 : #005198;
+    --cor3 : #A3CDE2;
+    --cor4 : #c0d8e2;
+    --cor5 : #000;
+    --cor6 : #fff;
+}
+
+/* Estilos gerais */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    animation: fade-in 1s ease-in-out   ;
+}
+
+/* Estilos cabeçalho */
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    background-color: var(--cor1);
+    padding: 14px 4%;
+    
+}
+
+#header-title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 22px;
+    transition: 0.5s;
+}
+
+#header-title:hover{
+    transform: scale(1.1);
+}   
+
+.header-nav{
+    padding: 10px;
+}
+
+.header-a{
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px;
+    transition: 0.5s;
+    border-bottom: 1px solid var(--cor4);
+    font-size: 13px;
+    color: var(--cor6);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+
+.header-a:focus,
+.header-a:hover {
+    color: #fff;
+}
+
+.header-a:focus:after,
+.header-a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.header-a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+}
+
+/* Caso precisar de ma barra de pesquisa */
+
+.header-search {
+    flex-grow: 1;
+    margin:  0px 20px 0px 20px;
+}
+
+.header-search input  {
+    width: 100%;
+    background: var(--cor0);
+    padding: 10px 20px;
+    outline: none;
+    transition: 0.5s;
+    border-radius: 14px;
+    border: 1px solid var(--cor4);
+    color: var(--cor4);
+}
+
+.header-search input:active {
+    transform: scale(0.95);
+}
+
+.header-search input::placeholder {
+    color: var(--cor3);
+    
+}
+
+.register-btn button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cor0);
+    border: 2px solid var(--cor4);
+    color: var(--cor4);
+    text-align: center;
+    font-weight: 600;
+    padding: 10px 18px; 
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.register-btn button:active {
+    transform: scale(0.95);
+}
+
+/* Animaçoes */ 
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
