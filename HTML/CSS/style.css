@@ -27,6 +27,8 @@ header{
 
 #header-title{
     font-size: 18px;
+    font-weight: bolder;
+    padding-right: 20px;
 }
 .headerd-nav{
    display: flex;
@@ -35,11 +37,18 @@ header{
 .header-a{
     text-decoration: none;
     color: white;
-    padding: 8px;
+    padding: 8px 15px;
     margin: 5px;
 
 }
 .header-a:hover{
+    transition: 0.3s;
     background-color: var(--cor2);
     border-radius: 20px;
+}
+
+
+main{
+    max-width: 850px;
+    min-width: 350px;
 }
