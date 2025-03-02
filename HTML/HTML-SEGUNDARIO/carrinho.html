@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
-     <link rel="stylesheet" href="../../CSS/CSS-SEGUNDARIO/carrinho.css">
+    <script src="/JS/main.js"></script>
+    <link rel="stylesheet" href="../../CSS/CSS-SEGUNDARIO/carrinho.css">
 </head>
 <body>
 
@@ -27,38 +28,5 @@
     <div class="voltar">
         <button class="finalizar-compra">Finalizar Compra</button>
     </div>
-
-    <script>
-        // Função para carregar os itens do carrinho
-        function carregarCarrinho() {
-            let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
-            const carrinhoContainer = document.getElementById('carrinho-container');
-            const totalContainer = document.getElementById('total-container');
-            let total = 0;
-
-            carrinhoContainer.innerHTML = 'X'; // Limpa os itens existentes
-
-            if (carrinho.length > 0) {
-                carrinho.forEach(item => {
-                    total += item.preco;
-                    const divItem = document.createElement('div');
-                    divItem.classList.add('item-carrinho');
-                    divItem.innerHTML = `
-                        <h3>${item.nome}</h3>
-                        <p>Preço: R$ ${item.preco}</p>
-                    `;
-                    carrinhoContainer.appendChild(divItem);
-                });
-                totalContainer.innerHTML = `Total: R$ ${total.toFixed(2)}`;
-            } else {
-                carrinhoContainer.innerHTML = '<p>Seu carrinho está vazio.</p>';
-                totalContainer.innerHTML = 'Total: R$ 0,00';
-            }
-        }
-
-        // Carrega os produtos do carrinho quando a página for carregada
-        window.onload = carregarCarrinho;
-    </script>
-
 </body>
 </html>
