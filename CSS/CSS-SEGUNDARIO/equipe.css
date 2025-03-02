@@ -44,12 +44,6 @@ header{
     border-radius: 5px;
 }
 
-
-main{
-    max-width: 850px;
-    min-width: 350px;
-}
-
 /*CSS do tablet*/
 
 @media (max-width:800px ){
