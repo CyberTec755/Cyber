@@ -203,6 +203,9 @@ header{
     font-weight: bold;
     color: var(--cor4);
 }
+.carrino{
+    
+}
 
 @keyframes fade-in {
     0% {
@@ -211,4 +214,21 @@ header{
     100% {
         opacity: 1;
     }
+}
+
+/*CSS do tablet*/
+
+@media (max-width:800px ){
+   
+
+
+
+}
+/* CSS do mobile*/
+
+@media(max-width:450px){
+ 
+    
+
+
 }

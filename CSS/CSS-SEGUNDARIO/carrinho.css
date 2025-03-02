@@ -56,3 +56,19 @@
     text-align: center;
     margin-top: 20px;
 }
+/*CSS do tablet*/
+
+@media (max-width:800px ){
+   
+
+
+
+}
+/* CSS do mobile*/
+
+@media(max-width:450px){
+ 
+    
+
+
+}
