@@ -27,14 +27,13 @@ header{
     padding: 14px 4%;
 }
 
-.header-cortana {
+.header-cortana{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#header-title {
-
+#header-title{
     color: var(--cor3);
     text-decoration: none;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
