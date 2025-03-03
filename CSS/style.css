@@ -310,6 +310,15 @@ header{
     }
 }
 /*main*/
+div.produto > img {
+    max-width: 150px;
+    max-height: 300px;
+  
+}
+div.produto > p {
+font-size: 14px;
+ padding: 10px;
+}
 
 .main-section-dois{
     
