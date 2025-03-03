@@ -309,6 +309,16 @@ header{
         opacity: 1;
     }
 }
+/*main*/
+
+.main-section-dois{
+    
+    height: 250px;
+    background-color: var(--cor2);
+
+}
+
+
 
 /*footer*/
 
