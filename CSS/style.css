@@ -322,13 +322,17 @@ header{
 }
 
 .text {
-    color: #f2f2f2;
-    font-size: 15px;
+    font-size: 20px;
     padding: 8px 12px;
     position: absolute;
     bottom: 8px;
     width: 100%;
-    text-align: center;
+    text-align: start;
+    font-family:  'Times New Roman', Times, serif;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: #ffffff;
+    filter: drop-shadow( 0 10px 6px #000);
 }
 
 .numbertext {
@@ -343,20 +347,20 @@ header{
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
-    background-color: #cccccc;
-    border: 1px solid #d1d1d1;
+    margin: 0 4px;
+    background-color: #323232;
+    border: 1px solid #ffffff;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-    position: absolute;
-    bottom: 10px;
+    position: relative;
+    bottom: 32px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-50%);
 }
 
 .active, .dot:hover {
-    background-color: #ff5733;
+    background-color: #0044ff;
 }
 
 
