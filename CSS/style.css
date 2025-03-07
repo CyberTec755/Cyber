@@ -4,7 +4,7 @@
     --cor0 : #00122D;
     --cor1 : #001e4b;
     --cor2 : #005198;
-    --cor3 : #A3CDE2;
+    --cor3 : #C0D8E2;
     --cor4 : #10b5bf;
     --cor5 : #141414;
     --cor6 : #000000;
@@ -18,15 +18,8 @@
     margin: 0px;
    
 }
-
-<<<<<<< Updated upstream
-=======
-body {
-    
-}
->>>>>>> Stashed changes
-
 .header-conteiner{
+    justify-content: center;
     width: 100%;
     position: fixed;
     display: flex;
@@ -57,6 +50,20 @@ body {
     font: bold 20px Arial, Helvetica, sans-serif;
 }
 
+.header-a-pagina {
+    text-decoration: none;
+    padding: 20px 20px 10px 20px;
+    color: var(--cor4);
+    font: bold 20px Arial, Helvetica, sans-serif;
+    
+    
+}
+
+.header-a-pagina:hover{
+    color: var(--cor3);
+    
+}
+
 .header-a:hover{
      color: var(--cor3);
 }
@@ -79,11 +86,9 @@ body {
 .main-section-img{
     background-repeat: no-repeat;
     background-image: url(https://cdn3d.iconscout.com/3d/premium/thumb/robo-inteligencia-artificial-8265056-6594715.png?f=webp);
-    margin-left: -50px;
     display: inline-block; 
     padding-top:  100px;
-    margin-left: 30px;
-    height: 400px;
+    margin-left: 40px;
     width: 450px;
 }
 
@@ -171,9 +176,14 @@ body {
     background-color: var(--cor5);
     gap: 20px;
 }
-.footer-ecopy, .footer-politica {
->>>>>>> Stashed changes
-    
+.footer-icones{
+    color: var(--cor7);
+   
+    height: 32px;
+    width: 32px;
+}
+
+.footer-ecopy, .footer-politica { 
     padding: 30px;
     color: var(--cor7);
 }

@@ -53,6 +53,14 @@ body {
     color: var(--cor4);
     font: bold 20px Arial, Helvetica, sans-serif;
 }
+.header-a-pagina {
+    text-decoration: none;
+    padding: 20px 20px 10px 20px;
+    color: var(--cor4);
+    font: bold 20px Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid var(--cor4);
+    
+}
 
 .header-a:hover{
      color: var(--cor3);
