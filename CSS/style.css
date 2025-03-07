@@ -19,6 +19,12 @@
    
 }
 
+<<<<<<< Updated upstream
+=======
+body {
+    
+}
+>>>>>>> Stashed changes
 
 .header-conteiner{
     width: 100%;
@@ -54,6 +60,7 @@
 .header-a:hover{
      color: var(--cor3);
 }
+
 /*main*/
 
 .main-section{
@@ -145,6 +152,8 @@
     line-height: 25px;
 }
 
+/* footer*/
+
 .footer-conteine{
     text-align: center;
     justify-content: space-between;
@@ -164,11 +173,20 @@
 }
 
 .footer-icones{
+<<<<<<< Updated upstream
     background-color:var(--cor7) ;
     color: var(--cor7);
 }
 
 .footer-ecopy , .footer-politica {
+=======
+    color: var(--cor7);
+    height: 32px;
+    width: 32px;
+}
+
+.footer-ecopy, .footer-politica {
+>>>>>>> Stashed changes
     
     padding: 30px;
     color: var(--cor7);
