@@ -55,6 +55,7 @@
     padding: 20px 20px 10px 20px;
     color: var(--cor4);
     font: bold 20px Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid var(--cor4);
     
     
 }
@@ -84,12 +85,13 @@
 
 
 .main-section-img{
+    border-radius: 50%;
     background-repeat: no-repeat;
     background-image: url(https://cdn3d.iconscout.com/3d/premium/thumb/robo-inteligencia-artificial-8265056-6594715.png?f=webp);
     display: inline-block; 
     padding-top:  100px;
     margin-left: 40px;
-    width: 450px;
+    background-size: auto;
 }
 
 .main-section-article{
