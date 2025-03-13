@@ -71,34 +71,43 @@
 
 /*main*/
 
-.main-section{
+main{
+    background-color: var(--cor5);
+}
 
+.main-section-pricipal{
+    max-width: 1400px;
    
+    margin: auto;
+    
+}
+
+.main-section{
     justify-content: left;
     padding-top:  150px;
     width: 100%;
     background-color:  var(--cor5);
-    height: 90vh;
     display: flex;
+    
    
 }
 
 
 .main-section-img{
-    border-radius: 50%;
     background-repeat: no-repeat;
     background-image: url(https://cdn3d.iconscout.com/3d/premium/thumb/robo-inteligencia-artificial-8265056-6594715.png?f=webp);
     display: inline-block; 
     padding-top:  100px;
     margin-left: 40px;
-    background-size: auto;
+    height: 327px;
+    width: 500px;
+    z-index: 1;
+   
 }
 
 .main-section-article{
     padding-top: 1.5%;
     height: 30px;
-    display: grid;
-   
     width: 600px ;
     
 }
@@ -109,6 +118,7 @@
 }
 
 .main-section-p{
+    padding-right: 15px;
     margin-top: 20px;
     color: var(--cor7);  
     text-align: justify;
@@ -116,47 +126,25 @@
     line-height: 25px;
 }
 
-
-.main-section-dois{
-    gap: 50px;
-    justify-content: center;
-    margin-top: 100px;
-    width: 100%;
-    height: 700px;
+.main-conteiner-contato{
     display: flex;
-   
+    background-color: var(--cor5);
+    justify-content: right;
+    padding-right: 60px ;
 }
 
-.main-section-img-dois{
-   
-    display: inline-block; 
-    padding-top:  100px;
-    border: 2px solid black;
-    height: 300px;
-    width: 600px;
-}
+.main-contato{
 
-.main-section-article-dois{
-   
-    height: 30px;
-    display: grid;
-    gap: 10px;
-    width: 600px ;
+    color: var(--cor4);
+    margin: 12px;
+    width: 25px;
+    height: 25px;
+    border: 0.3px solid  #10b6bf63;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: -100px;
+    box-shadow:  0px 0px 20px  #10b6bf;
     
-}
-
-.main-section-h1-dois{
-    text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.629);
-    color: var(--cor2);
-    font: bold 30px Arial, Helvetica, sans-serif;
-}
-
-.main-section-p-dois{
-    margin-top: 20px;
-    color: var(--cor7);  
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 25px;
 }
 
 /* footer*/
