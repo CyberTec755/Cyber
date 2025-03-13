@@ -1,0 +1,7 @@
+{
+    "powermode.enabled": true,
+    "files.autoSave": "onWindowChange",
+    "editor.fontFamily": "inter",
+    "editor.renderWhitespace": "boundary",
+    "editor.cursorStyle": "line"
+}
