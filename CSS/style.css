@@ -1,202 +1,355 @@
 @charset "UTF-8";
 
-:root{
-    --cor0 : #00122D;
-    --cor1 : #001e4b;
-    --cor2 : #005198;
-    --cor3 : #C0D8E2;
-    --cor4 : #10b5bf;
-    --cor5 : #141414;
-    --cor6 : #000000;
-    --cor7 : #fff;
-    
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor0: #00122D;
+    --cor1: #001e4b;
+    --cor2: #005198;
+    --cor3: #A3CDE2;
+    --cor4: #10b5bf;
+    --cor5: #141414;
+    --cor6: #000000;
+    --cor7: #fff;
 }
- 
-*{
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 0px;
-    margin: 0px;
-   
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.header-conteiner{
-    justify-content: center;
+
+body {
+
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--cor6);
+}
+
+/* Header */
+
+.header-container {
     width: 100%;
+    height: 15vh;
+    top: 0;
+    left: 0;
     position: fixed;
     display: flex;
-    padding:  30px 20px ;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 4%;
     background-color: var(--cor5);
-    
+    box-shadow: 0 5px 5px var(--cor6);
+    z-index: 100;
 }
 
-#header-title{
-    
-    color: var(--cor4);
-    text-decoration: none;
-    font: bold 20px Arial, Helvetica, sans-serif;
-    margin-right: 20px;
+.header-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: transparent;
+    overflow: hidden;
+    cursor: pointer;
+    border: none;
 }
 
-.header-nav{
-   
-    margin-left:auto ;
-    margin-right: auto;
+.header-title::after {
+    content: " ";
+    width: 0%;
+    height: 100%;
+    background-color: var(--cor4);
+    position: absolute;
+    transition: all .5s ease-in-out;
+    right: 0;
 }
 
-.header-a{
-   
+.header-title:hover::after {
+    right: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header-title h1 {
+    text-align: center;
+    width: 100%;
+    padding: 18px 25px;
+    color: var(--cor7);
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 20;
+    transition: all .5s ease-in-out;
+}
+
+.header-title h1:hover {
+    color: var(--cor7);
+    animation: scaleUP .3s ease-in-out;
+}
+
+.header-nav {
+    margin-right: 14%;
+}
+
+.header-a {
     text-decoration: none;
     padding: 20px;
     color: var(--cor4);
-    font: bold 20px Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    transition: .5s;
 }
 
 .header-a-pagina {
     text-decoration: none;
     padding: 20px 20px 10px 20px;
     color: var(--cor4);
-    font: bold 20px Arial, Helvetica, sans-serif;
     border-bottom: 2px solid var(--cor4);
-    
-    
 }
 
-.header-a-pagina:hover{
+.header-a:hover {
     color: var(--cor3);
-    
 }
 
-.header-a:hover{
-     color: var(--cor3);
+/* Main */
+
+main {
+    margin: 8% 0 0 0;
+    background: url('/IMG/bg.jpg') center no-repeat;
+    background-size: cover;
+    height: 100%;
 }
 
-/*main*/
-
-main{
-    background-color: var(--cor5);
+section {
+    padding: 60px 20px;
 }
 
-.main-section-pricipal{
-    max-width: 1400px;
-   
-    margin: auto;
-    
+.container {
+    width: 80%;
+    margin: 0 auto;
+    background: transparent;
 }
 
-.main-section{
-    justify-content: left;
-    padding-top:  150px;
-    width: 100%;
-    background-color:  var(--cor5);
+/* Serviços */
+
+.servico-1 {
+    border: 1px solid var(--cor4);
     display: flex;
-    
-   
-}
-
-
-.main-section-img{
-    background-repeat: no-repeat;
-    background-image: url(https://cdn3d.iconscout.com/3d/premium/thumb/robo-inteligencia-artificial-8265056-6594715.png?f=webp);
-    display: inline-block; 
-    padding-top:  100px;
-    margin-left: 40px;
-    height: 327px;
-    width: 500px;
-    z-index: 1;
-   
-}
-
-.main-section-article{
-    padding-top: 1.5%;
-    height: 30px;
-    width: 600px ;
-    
-}
-
-.main-section-h1{
-    color: var(--cor4);
-    font: bold 30px Arial, Helvetica, sans-serif;
-}
-
-.main-section-p{
-    padding-right: 15px;
-    margin-top: 20px;
-    color: var(--cor7);  
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 25px;
-}
-
-.main-conteiner-contato{
-    display: flex;
-    background-color: var(--cor5);
-    justify-content: right;
-    padding-right: 60px ;
-}
-
-.main-contato{
-    
-    color: var(--cor4);
-    margin: 12px;
-    width: 25px;
-    height: 25px;
-    border: 0.3px solid  #10b6bf63;
-    padding: 10px;
-    border-radius: 50%;
-    margin-top: -100px;
-    box-shadow:  0px 0px 20px  #10b6bf;
-    
-}
-
-/* footer*/
-
-.footer-conteine{
-    text-align: center;
+    align-items: center;
     justify-content: space-between;
+    width: 80%;
+    max-width: 1200px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 10%;
+    box-shadow: 0 4px 8px #10b6bfcc;
+}
+
+.paragrafos {
     display: flex;
-    gap: 20px;
-    background-color: var(--cor5);
-
+    flex-direction: column;
+    justify-content: center;
 }
-.footer-conteiner-icones{
-    margin-right: auto;
-    margin-left: auto;
-    color: var(--cor6);
+
+.p1 {
+    font-size: 16px;
+    color: var(--cor2);
+}
+
+.p2 {
+    font-size: 24px;
+    color: var(--cor2);
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+.p3 {
+    font-size: 32px;
+    color: var(--cor2);
+    margin-top: 10px;
+}
+
+.texto {
+    max-width: 50%;
+    padding-left: 20px;
+}
+
+.texto p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--cor7);
+}
+
+h2 {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Inter', sans-serif;
+    color: var(--cor7);
+}
+
+span {
+    color: var(--cor4);
+}
+
+#sobre p {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--cor7);
+}
+
+.servicos-lista {
     display: flex;
-    padding: 30px 0px;
-    background-color: var(--cor5);
-    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.footer-icones{
+
+.servico {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px #10b6bfcc;
+    width: 30%;
+    height: 30%;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--cor4);
+    transition: .3s ease-in;
+}
+
+.servico:hover {
+    transform: translateY(-10px);
+}
+
+.servico h3 {
+    margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;
+    color: var(--cor4);
+}
+
+/* Formulário de Contato */
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--cor1);
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+form button {
+    padding: 10px;
+    background-color: var(--cor1);
     color: var(--cor7);
-   
-    height: 32px;
-    width: 32px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
 }
 
-.footer-ecopy, .footer-politica { 
-    padding: 30px;
+form button:hover {
+    background-color: var(--cor2);
+}
+
+/* Footer */
+
+footer {
+    position: relative;
+    background-color: var(--cor0);
     color: var(--cor7);
-}
-.footer-a{
-    text-decoration: none;
-    color: var(--cor7);
-}
-
-
-/*CSS do tablet*/
-
-@media (max-width:800px ){
-   
-
-
-
-}
-/* CSS do mobile*/
-
-@media(max-width:450px){
- 
-    
-
-
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
 }
 
+
+@media (max-width: 1024px) {
+    .header-title h1 {
+        font-size: 24px;
+    }
+
+    .header-nav {
+        margin-right: 10%;
+    }
+
+    .servico {
+        width: 45%;
+    }
+
+    .servicos-lista {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .servico-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .servico {
+        width: 80%;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-title h1 {
+        font-size: 20px;
+    }
+
+    .servico {
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    form input,
+    form textarea {
+        font-size: 0.9em;
+    }
+
+    form button {
+        font-size: 1em;
+    }
+}
