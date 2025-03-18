@@ -22,7 +22,7 @@
 }
 
 body {
-    background-color: var(--cor7);
+    background-image: url('https://i.gifer.com/J4o.mp4');
 }
 
 .header-container{
@@ -113,12 +113,12 @@ body {
 /* main */
 
 .banner-container {
-    margin: 10% 4%;
+    margin: 10% 4% 2%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center ;
-    background-color: #10b5bf;
+    background-color: var(--cor2);
     width: 90%;
     height: 400px;
     box-shadow: 0px 10px 10px #00000054;
@@ -133,24 +133,87 @@ body {
 }
 
 .banner h1 {
+    color: var(--cor7);
     margin: 0;
-    font-size: 36px;
+    font-size: 70px;
+} 
+
+.banner h1 span {
+    color: var(--cor4);
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.banner p {
-    font-size: 18px;
-    margin: 10px 0;
+/* Serviços */
+
+#servicos {
+    padding: 14px 4%;
+    background-color: #ffffff;
 }
 
-.banner .offer {
-    font-size: 24px;
-    font-weight: bold;
-    color: var(--cor1);
+#servicos .container {
+    margin: 14px 4%;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
 }
 
-/* cards */
+.container p {
+    margin-bottom: 40px;
+}
 
-.row
+#servicos h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#servicos .servico {
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    width: 8%;
+    transition:.3s ease;
+}
+
+#servicos .servico:hover {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px #00000053;
+    transform: translateY(-10px);
+    transition: .3s ease;
+}
+
+#servicos .servico h3 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#servicos .servico p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* serviços pupolares */
+
+.populares {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 80%;
+    margin: 14px 4%;
+
+}
+
+.pop-img {
+
+}
+
+.txt {
+    
+}
 
 /* Animations */
 
