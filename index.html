@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Tec - projeto </title>
+    
+    <link rel="stylesheet" href="../CSS/geral.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-container">
+            <nav class="header-nav" id="nav-bar">
+                <a href="#header" class="header-title" id="logo">CYBER<span>TEC</span></a>
+                
+                <ul id="nav-list">
+                    <li class="nav-item active">
+                        <a href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="equipe.html">Equipe</a>
+                    </li>
+                </ul>
+
+                    <a href="contato.html">
+                        <button class="default-btn">Entre em contato</button>
+                    </a>
+
+                <button id="mobile-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </nav>
+
+            <div id="mobile-menu">
+                <ul id="mobile-nav-list">
+                    <li class="nav-item">
+                        <a href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="equipe.html">Equipe</a>
+                    </li>
+                </ul>
+
+                    <a href="contato.html">
+                        <button class="default-btn">Entre em contato</button>
+                    </a>
+            </div>
+        </div>
+    </header>
+    <main class="content">
+        <section id="home">
+            <div class="shape"></div>
+            <div class="cta">
+               <h1 class="title">
+                    Inovando seu 
+                    <span>Futuro.</span>
+                </h1>
+               <p class="descriton">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, 
+                    nunc non egestas iaculis, augue erat iaculis urna
+                </p> 
+
+                <div class="cta-buttons">
+                    <a href="" class="default-btn">
+                        Ver serviços
+                    </a>
+
+                    <a href="" class="phone-button">
+                        <button class="default-btn">
+                            <i class="fa-solid fa-phone"></i>
+                        </button>
+                        (83) 98644575
+                    </a>
+
+                </div>
+
+                <div class="social-media-btns">
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="banner">
+                <img src="/IMG/sobre.png" alt="">
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('active');
+            });
+ 
+    </script>
+</body>
+</html>
