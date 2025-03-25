@@ -4,8 +4,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 50px 20px;
-    background: #e0f7fa;
+    padding: 30px 20px;
+    background: #ffffff;
 }
 
 
@@ -26,61 +26,49 @@
     transition: .4s ease;
     box-shadow: 0 0 10px #00000046;
     margin: 15px;
+    border-radius: 11px;
+
 }
 
 .card:hover {
-    background: black;
-    color: white;
+    transform: translateY(-10px);
 }
 
 .card-icon i {
     color: var(--cor4);
     margin: 15px;
-    transition: inherit;
-    transition-delay: 0;
     font-size: 50px;
+    transition: transform .4s ;
+    transition-delay: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.06,.01,.0.1);
+}
+
+.card-content h4 {
+    color: var(--cor4);
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    transition: transform .4s ;
+    transition-delay: .3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(.06,.01,.0.1);
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #181818;
+    margin-bottom: 15px;
+    transition: inherit;
+    transition-delay: 1s;
     transition: .4s;
-}
 
-.card:hover .card-icon {
-    color: white;
 }
-
 .card:hover i,
 .card:hover h4,
 .card:hover p {
     transform: translateY(-0.625rem);
 
-}
-
-.card-content h4 {
-    color: var(--cor4);
-    margin-top: 20px;
-    margin-bottom: 15px;
-    transition: inherit;
-    transition-delay: 1s;
-    transition: .4s;
-}
-
-.card:hover h4 {
-    color: white;
-}
-
-.card-content p {
-    font-size: 14px;
-    color: #00796b;
-    margin-bottom: 15px;
-    transition: inherit;
-    transition-delay: 1s;
-    transition: .4s;
-
-}
-
-.card:hover p {
-    color: #d1d1d1;
-    transition: inherit;
-    transition-delay: 1s;
-    transition: .4s;
 }
 
 .saiba-mais {
@@ -106,14 +94,13 @@
     transition: transform 0.4s ease-in-out;
 }
 
-.card:hover .saiba-mais {
-    color: white;
-}
 
 .card:hover .saiba-mais::after {
     transform: scaleX(1);
-    background: white;
+    background: var(--cor4)
 }
+
+@
 
 @media (max-width: 768px) {
     .lista-servicos {
