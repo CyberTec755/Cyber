@@ -1,0 +1,36 @@
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 90px);
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #ffffff;
+    margin: 14px 4%;
+    padding: 5%;
+    box-shadow: 0 0 10px var(--cor6);
+}
+
+.form-img {
+    width: 50%;
+
+}
+
+.form-img img {
+    width: 50%;
+    width: fit-content;
+}
+
+.form form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+}
+

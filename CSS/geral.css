@@ -86,10 +86,9 @@ section {
 
 .section-title {
     color: var(--cor4);
-    margin-top: 10%;
+    margin-top: 5%;
     font-size: 35px;
     margin-bottom: 30px;
-    font-family: Roboto;
     text-align: center;
 }
 
