@@ -1,0 +1,15 @@
+.slider-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    max-width: 10000px;
+    border: 1px solid red;
+    margin: 14px 4%;
+    height: 500px;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+}
