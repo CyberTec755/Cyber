@@ -1,7 +1,5 @@
 #home {
-    position: relative;
-    display: flex;
-    min-height: calc(100vh - 90px);
+    
 }
 
 .cta {
