@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../CSS/geral.css">
     <link rel="stylesheet" href="../CSS/header.css">
     <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="/CSS/servico.css">
-    <link rel="stylesheet" href="/CSS/slidershow.css">
+    <link rel="stylesheet" href="../CSS/servico.css">
+    <link rel="stylesheet" href="../CSS/slidershow.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="JS/main.js"></script>
 </head>
@@ -67,48 +67,50 @@
     </header>
     <main class="content">
         <section id="home">
-            <div class="slider-show">
-                <div class="slide">
-                    <img src="" alt="">
-                </div>
-                <div class="slide">
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.64xnwNd2KZ0ffe5hKyzqXgHaDp%26pid%3DApi&f=1&ipt=f4923c2ddfb6a358f2879c9f96c163e909b151bbfd7242a16573fd695deadd37&ipo=images" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/IMG/Ilustração do conceito de estruturas javascript _ Vetor Grátis (1).jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="/IMG/sobre.png" alt="">
-                </div>
-            </div>
-            <div class="cta">
-               <h1 class="title">
-                    O melhor site para seu
-                    <span>Futuro.</span>
-                </h1>
-               <p class="descriton">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, 
-                    nunc non egestas iaculis, augue erat iaculis urna
-                </p> 
-
-                <div class="cta-buttons">
-                    <a href="" class="default-btn">
-                        Ver serviços
-                    </a>
-
-                    <a href="" class="phone-button">
-                        <button class="default-btn">
-                            <i class="fa-solid fa-phone"></i>
-                        </button>
-                        (83) 98649-4575
-                    </a>
-
-                </div>
-
-                <div class="social-media-btns">
-                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/cyber_tech_adilina?igsh=cmxxMW90dDRzYmhh"><i class="fa-brands fa-instagram"></i></a>
-                </div>
+            <div class="container">
+                <div class="slideshow-container">
+                    <img class="mySlides" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpaperset.com%2Fw%2Ffull%2Fb%2F6%2F8%2F484254.jpg&f=1&nofb=1&ipt=cf8288bda1231a1077211537b5606983a7e5bbaa8b2bc6038e739b41e16fb8d9" alt="Imagem 1">
+                    <img class="mySlides" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.pixelstalk.net%2Fwp-content%2Fuploads%2F2016%2F07%2F1920x1080-HD-Wallpapers-For-Desktop.jpg&f=1&nofb=1&ipt=5ee52c6edbb411bf2049449a83a5b7acfce26197923fe531c0b6ec0d95d0d948" alt="Imagem 2">
+                    <img class="mySlides" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F9c%2F7b%2Fe4%2F9c7be43979a736a8695361a544630b97.jpg&f=1&nofb=1&ipt=6813de34b97e621f34b32f4741bdcbaef48028b9397657b4c2829132d2baafdb" alt="Imagem 3">
+                  
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  
+                  <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                  <div class="cta">
+                      <h1 class="title">
+                           O melhor site para seu
+                           <span>Futuro.</span>
+                       </h1>
+                      <p class="descriton">
+                           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt, 
+                           nunc non egestas iaculis, augue erat iaculis urna
+                       </p> 
+          
+                       <div class="cta-buttons">
+                           <a href="" class="default-btn">
+                               Ver serviços
+                           </a>
+          
+                           <a href="" class="phone-button">
+                               <button class="default-btn">
+                                   <i class="fa-solid fa-phone"></i>
+                               </button>
+                               (83) 98649-4575
+                           </a>
+          
+                       </div>
+          
+                       <div class="social-media-btns">
+                           <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                           <a href="https://www.instagram.com/cyber_tech_adilina?igsh=cmxxMW90dDRzYmhh"><i class="fa-brands fa-instagram"></i></a>
+                       </div>
+                   </div>
             </div>
 
         </section>
@@ -183,6 +185,45 @@
             mobileBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('active');
             }); 
+
+            function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("slide");
+
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+  }
+
+  let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("slide");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
  
     </script>
 </body>
